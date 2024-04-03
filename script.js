@@ -76,7 +76,7 @@ const songDetails = [
         artist: "Arjit Singh", 
         downloadSrc: "Phir Aur Kya Chahiye.mp3", 
         audioSrc: "O Mahi.mp3", 
-        imgSrc:"O-mahi.jpg"
+        imgSrc:"O-Mahi.jpg"
     }, 
     {
         name: "Kahani Suni", 

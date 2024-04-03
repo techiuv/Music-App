@@ -1,0 +1,226 @@
+:root{
+    --bg:#1a1a1a;
+    --light-color: #d9d9d9;
+    --main-color: #10c25a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;    
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: var(--bg);   
+}
+
+#head{
+    background:linear-gradient(rgba(255,255,255,0),#1a1a1a) 80% , url("bg.jpg") no-repeat center/contain;
+    background-size: 100% 100%;
+    height: 30vh;
+    width: 100vw;
+    position: relative;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 1s;
+    z-index: 55;
+    
+    .load{
+        height: 100%;
+        width: 100%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        span{
+            font-size: 40vw;
+            color: #10c25a;
+        }
+        
+        p{
+            font-size: 6vw;
+        }
+    }
+}
+
+#shuffle {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    background: var(--main-color);
+    border: none;
+    color: #1a1a1a;
+    font-size: 4.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+
+#song-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    margin: 3vh 0;
+}
+
+#day{
+    font-size: 5vw;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+#song-count{
+    color: var(--light-color);
+    font-size: 2.8vw;
+    
+}
+
+
+#song-container{
+    width: 100vw;
+    height: 40vh;
+    margin: 3vh 0;
+    overflow: scroll;
+}
+
+.music-dts:first-child{
+    margin-top: 0;
+}
+
+.music-dts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;    
+    margin: auto;
+    margin-top: 3vh;    
+}
+
+.img-thumbnail{
+    height: 5vh;
+    width: 5vh;
+    position: relative;   
+    
+    img{
+        height: 100%;
+        width: 100%;
+        aspect-ratio:1/1;
+        object-fit: cover;
+    } 
+}
+
+.song-dts{
+    width: 60%;      
+}
+
+.song-name{
+    font-size: 4vw;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.artist-name{
+    font-size: 2vw;
+    color: var(--light-color);
+}
+
+.like-share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        li, 
+        li a{
+            list-style: none;
+            padding: 1vw;
+            font-size: 5vw;
+            color: var(--light-color);
+        }
+    }
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 17vh;
+    
+    
+    input[type="range"]{
+        width: 80%;
+        -webkit-appearance:none;
+        -webkit-transition: .2s;
+        height: 2px;
+        background: var(--light-color);
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance:none;
+        appearance:none;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: var(--main-color);
+    }
+    
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3vh;
+        
+        li{
+            list-style: none;
+            font-size: 4vw;
+            margin: 0 5vw;
+            position: relative;
+        }
+       
+       li:nth-child(2),
+       #startBtn {
+           font-size: 6vw;
+           background: var(--main-color);
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 2vh;
+           border-radius: 50%;
+       }
+       
+       #startBtn{
+           position: absolute;
+           top: 0;
+           left: 0;         
+           height: 100%;
+           width: 100%;
+           z-index: 1;      
+          /*  background: red;      */
+       }
+       
+    }
+    
+}
+
